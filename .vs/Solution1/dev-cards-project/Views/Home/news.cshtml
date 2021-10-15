@@ -1,0 +1,27 @@
+﻿@model News
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <h1>@Model</h1>
+    <thead>
+        
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.newsid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.image)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    
+</table>

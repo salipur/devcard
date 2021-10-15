@@ -11,18 +11,24 @@ namespace dev_cards_project.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
-
-        public IActionResult Index()
+      public IActionResult projects()
         {
             return View();
         }
 
+        public IActionResult Index() { 
+             News n = new News()
+            {
+                description = " i am description", title = "i am title", newsid = 100
+            };
+       
+            return View(n);
+        }
+
+        public IActionResult news()
+        {
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();
